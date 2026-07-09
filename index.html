@@ -4,92 +4,148 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>แมว วราลักษณ์ | ที่ปรึกษาประกันชีวิต</title>
-  <meta name="description" content="เว็บไซต์ที่ปรึกษาประกันชีวิตและสุขภาพของแมว วราลักษณ์ ช่วยวางแผนคุ้มครองชีวิต สุขภาพ บำนาญ และอนาคตครอบครัว" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --primary: #8b5a2b;
-      --primary-dark: #5f3b1c;
-      --accent: #d8a24a;
-      --cream: #fff7ec;
-      --soft: #f6ead9;
-      --text: #2d241f;
-      --muted: #6f6259;
+      --blue: #0054a6;
+      --blue-dark: #003b75;
+      --blue-deep: #002b55;
+      --gold: #f7b500;
+      --gold-soft: #fff3c4;
+      --bg: #f5f9ff;
+      --soft-blue: #eaf3ff;
+      --text: #10243e;
+      --muted: #5d7088;
       --white: #ffffff;
-      --line: #ead8c2;
-      --success: #2f8f5b;
-      --shadow: 0 18px 45px rgba(70, 45, 22, 0.13);
+      --line: #d7e6f7;
+      --green: #16824a;
+      --shadow: 0 18px 45px rgba(0, 62, 126, 0.14);
       --radius: 24px;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Noto Sans Thai', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      color: var(--text);
-      background: linear-gradient(180deg, #fffaf4 0%, #ffffff 45%, #fff7ec 100%);
-      line-height: 1.65;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; display: block; }
-    .container { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Noto Sans Thai', sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #f5f9ff 0%, #ffffff 45%, #edf6ff 100%);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
 
     header {
       position: sticky;
       top: 0;
       z-index: 20;
+      background: rgba(245, 249, 255, 0.92);
       backdrop-filter: blur(14px);
-      background: rgba(255, 250, 244, 0.86);
-      border-bottom: 1px solid rgba(234, 216, 194, 0.8);
+      border-bottom: 1px solid var(--line);
     }
 
     .nav {
       height: 76px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       gap: 20px;
     }
 
-    .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; letter-spacing: -0.4px; }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+    }
+
     .brand-mark {
       width: 46px;
       height: 46px;
       border-radius: 16px;
       display: grid;
       place-items: center;
-      color: var(--white);
-      background: linear-gradient(135deg, var(--primary), var(--accent));
-      box-shadow: 0 10px 25px rgba(139,90,43,.22);
-      font-size: 22px;
+      color: white;
+      background: linear-gradient(135deg, var(--blue-dark), var(--blue) 62%, var(--gold));
+      box-shadow: 0 10px 25px rgba(0,84,166,.25);
+      font-size: 21px;
     }
-    .brand small { display: block; font-size: 12px; font-weight: 500; color: var(--muted); margin-top: -3px; }
 
-    .menu { display: flex; align-items: center; gap: 22px; color: var(--muted); font-weight: 600; font-size: 15px; }
-    .menu a:hover { color: var(--primary); }
+    .brand small {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: -4px;
+      font-weight: 500;
+    }
+
+    .menu {
+      display: flex;
+      gap: 22px;
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .menu a:hover {
+      color: var(--blue);
+    }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
       border: none;
       border-radius: 999px;
       padding: 13px 22px;
       cursor: pointer;
       font-family: inherit;
       font-weight: 700;
-      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+      transition: 0.2s;
       white-space: nowrap;
     }
-    .btn:hover { transform: translateY(-2px); }
-    .btn-primary { color: var(--white); background: linear-gradient(135deg, var(--primary), var(--primary-dark)); box-shadow: 0 14px 25px rgba(95,59,28,.22); }
-    .btn-ghost { color: var(--primary-dark); background: rgba(255,255,255,.75); border: 1px solid var(--line); }
 
-    .hero { padding: 76px 0 50px; position: relative; overflow: hidden; }
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      color: white;
+      background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+      box-shadow: 0 14px 25px rgba(0,59,117,.24);
+    }
+
+    .btn-ghost {
+      color: var(--blue-dark);
+      background: white;
+      border: 1px solid var(--line);
+    }
+
+    .hero {
+      padding: 76px 0 50px;
+      position: relative;
+      overflow: hidden;
+    }
+
     .hero::before {
       content: "";
       position: absolute;
@@ -98,120 +154,207 @@
       border-radius: 50%;
       right: -190px;
       top: -160px;
-      background: radial-gradient(circle, rgba(216,162,74,.30), rgba(216,162,74,0) 65%);
+      background: radial-gradient(circle, rgba(247,181,0,.28), rgba(247,181,0,0) 65%);
       pointer-events: none;
     }
-    .hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 42px; align-items: center; }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 42px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
     .eyebrow {
       display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(216,162,74,.16);
-      color: var(--primary-dark);
+      background: rgba(247,181,0,.18);
+      color: var(--blue-dark);
       padding: 8px 14px;
       border-radius: 999px;
       font-weight: 700;
       font-size: 14px;
       margin-bottom: 18px;
     }
+
     h1 {
       font-size: clamp(38px, 5vw, 68px);
       line-height: 1.08;
       letter-spacing: -1.5px;
       margin-bottom: 20px;
     }
-    .hero p { font-size: 19px; color: var(--muted); max-width: 630px; margin-bottom: 28px; }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 28px; }
-    .trust-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; max-width: 640px; }
+
+    .hero p {
+      font-size: 19px;
+      color: var(--muted);
+      max-width: 630px;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .trust-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      max-width: 640px;
+    }
+
     .trust-card {
-      background: rgba(255,255,255,.75);
+      background: rgba(255,255,255,.78);
       border: 1px solid var(--line);
       border-radius: 18px;
       padding: 15px;
     }
-    .trust-card strong { display: block; font-size: 22px; color: var(--primary-dark); }
-    .trust-card span { color: var(--muted); font-size: 13px; }
+
+    .trust-card strong {
+      display: block;
+      font-size: 22px;
+      color: var(--blue-dark);
+    }
+
+    .trust-card span {
+      color: var(--muted);
+      font-size: 13px;
+    }
 
     .profile-card {
-      position: relative;
-      background: linear-gradient(145deg, #ffffff, #fff1dd);
+      background: linear-gradient(145deg, #ffffff, #eaf3ff);
       border: 1px solid var(--line);
       border-radius: 36px;
       padding: 22px;
       box-shadow: var(--shadow);
-      overflow: hidden;
+      position: relative;
     }
+
     .profile-inner {
-      min-height: 510px;
+      min-height: 500px;
       border-radius: 28px;
       background:
-        linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.92)),
-        radial-gradient(circle at 25% 15%, rgba(216,162,74,.34), transparent 33%),
-        linear-gradient(135deg, #8b5a2b, #f1c27d);
+        radial-gradient(circle at 25% 15%, rgba(247,181,0,.34), transparent 33%),
+        linear-gradient(135deg, #003b75, #0054a6 62%, #f7b500);
       display: flex;
       align-items: end;
       justify-content: center;
       padding: 34px;
-      position: relative;
     }
+
     .portrait-placeholder {
       width: 82%;
       aspect-ratio: 1 / 1.2;
       border-radius: 42% 42% 32px 32px;
-      background: linear-gradient(180deg, #fff5e8, #e3b271);
+      background: linear-gradient(180deg, #ffffff, #eaf3ff 58%, #fff3c4);
       border: 8px solid rgba(255,255,255,.48);
       display: grid;
       place-items: center;
       text-align: center;
-      color: var(--primary-dark);
+      color: var(--blue-dark);
       font-weight: 800;
       font-size: 28px;
       padding: 28px;
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,.4), 0 20px 40px rgba(95,59,28,.22);
+      box-shadow: 0 20px 40px rgba(0,59,117,.22);
     }
+
     .floating-note {
       position: absolute;
       left: 22px;
       bottom: 28px;
-      background: rgba(255,255,255,.94);
+      background: rgba(255,255,255,.95);
       border: 1px solid var(--line);
       border-radius: 22px;
       padding: 16px 18px;
       max-width: 280px;
-      box-shadow: 0 14px 30px rgba(70,45,22,.13);
+      box-shadow: 0 14px 30px rgba(0,62,126,.13);
     }
-    .floating-note strong { color: var(--success); display: block; }
-    .floating-note span { color: var(--muted); font-size: 14px; }
 
-    section { padding: 76px 0; }
-    .section-head { text-align: center; max-width: 720px; margin: 0 auto 34px; }
-    .section-head h2 { font-size: clamp(30px, 4vw, 46px); line-height: 1.18; letter-spacing: -.8px; margin-bottom: 12px; }
-    .section-head p { color: var(--muted); font-size: 17px; }
+    .floating-note strong {
+      color: var(--green);
+      display: block;
+    }
 
-    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .floating-note span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    section {
+      padding: 76px 0;
+    }
+
+    .section-head {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 34px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.18;
+      margin-bottom: 12px;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
     .card {
-      background: var(--white);
+      background: white;
       border: 1px solid var(--line);
       border-radius: var(--radius);
       padding: 26px;
-      box-shadow: 0 10px 30px rgba(70,45,22,.07);
+      box-shadow: 0 10px 30px rgba(0,62,126,.08);
     }
+
     .icon {
       width: 54px;
       height: 54px;
       border-radius: 18px;
-      background: var(--cream);
+      background: var(--bg);
       display: grid;
       place-items: center;
       font-size: 25px;
       margin-bottom: 14px;
     }
-    .card h3 { font-size: 22px; margin-bottom: 9px; color: var(--primary-dark); }
-    .card p { color: var(--muted); }
 
-    .process { background: linear-gradient(180deg, #fff7ec, #fffaf4); }
-    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; counter-reset: step; }
-    .step { position: relative; padding-top: 62px; }
+    .card h3 {
+      font-size: 22px;
+      margin-bottom: 9px;
+      color: var(--blue-dark);
+    }
+
+    .card p {
+      color: var(--muted);
+    }
+
+    .process {
+      background: linear-gradient(180deg, #edf6ff, #f8fbff);
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      counter-reset: step;
+    }
+
+    .step {
+      position: relative;
+      padding-top: 62px;
+    }
+
     .step::before {
       counter-increment: step;
       content: counter(step);
@@ -223,44 +366,93 @@
       border-radius: 16px;
       display: grid;
       place-items: center;
-      background: var(--primary);
-      color: var(--white);
+      background: var(--blue);
+      color: white;
       font-weight: 800;
     }
 
-    .plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; align-items: stretch; }
-    .plan { position: relative; overflow: hidden; }
-    .plan.featured { border: 2px solid var(--accent); transform: translateY(-8px); }
+    .plans {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .plan.featured {
+      border: 2px solid var(--gold);
+      transform: translateY(-8px);
+    }
+
     .badge {
       display: inline-flex;
-      background: rgba(216,162,74,.18);
-      color: var(--primary-dark);
+      background: rgba(247,181,0,.20);
+      color: var(--blue-dark);
       border-radius: 999px;
       padding: 6px 12px;
       font-weight: 800;
       font-size: 13px;
       margin-bottom: 12px;
     }
-    .price { font-size: 32px; font-weight: 800; color: var(--primary-dark); margin: 12px 0 4px; }
-    .price small { font-size: 14px; color: var(--muted); font-weight: 600; }
-    ul { list-style: none; margin-top: 18px; display: grid; gap: 10px; }
-    li { color: var(--muted); display: flex; gap: 8px; align-items: flex-start; }
-    li::before { content: "✓"; color: var(--success); font-weight: 900; }
+
+    .price {
+      font-size: 30px;
+      font-weight: 800;
+      color: var(--blue-dark);
+      margin: 12px 0 4px;
+    }
+
+    .price small {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    ul {
+      list-style: none;
+      margin-top: 18px;
+      display: grid;
+      gap: 10px;
+    }
+
+    li {
+      color: var(--muted);
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+    }
+
+    li::before {
+      content: "✓";
+      color: var(--green);
+      font-weight: 900;
+    }
 
     .calculator {
       display: grid;
       grid-template-columns: .9fr 1.1fr;
       gap: 24px;
       align-items: center;
-      background: var(--white);
+      background: white;
       border: 1px solid var(--line);
       border-radius: 34px;
       padding: 32px;
       box-shadow: var(--shadow);
     }
-    .form-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
-    label { display: grid; gap: 6px; font-weight: 700; color: var(--primary-dark); }
-    input, select, textarea {
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    label {
+      display: grid;
+      gap: 6px;
+      font-weight: 700;
+      color: var(--blue-dark);
+    }
+
+    input,
+    select,
+    textarea {
       width: 100%;
       border: 1px solid var(--line);
       border-radius: 16px;
@@ -268,30 +460,59 @@
       font-family: inherit;
       font-size: 15px;
       outline: none;
-      background: #fffdf9;
+      background: #fbfdff;
     }
-    input:focus, select:focus, textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 4px rgba(216,162,74,.16); }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 4px rgba(247,181,0,.18);
+    }
+
     .result-box {
       margin-top: 16px;
       padding: 18px;
       border-radius: 20px;
-      background: var(--cream);
+      background: var(--bg);
       border: 1px solid var(--line);
     }
-    .result-box strong { font-size: 26px; color: var(--primary-dark); display: block; }
-    .result-box span { color: var(--muted); }
 
-    .about-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 24px; align-items: center; }
+    .result-box strong {
+      font-size: 26px;
+      color: var(--blue-dark);
+      display: block;
+    }
+
+    .result-box span {
+      color: var(--muted);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 24px;
+      align-items: center;
+    }
+
     .quote {
       font-size: 27px;
       line-height: 1.35;
       font-weight: 800;
-      color: var(--primary-dark);
+      color: var(--blue-dark);
       margin-bottom: 16px;
     }
 
-    .contact { background: linear-gradient(135deg, var(--primary-dark), var(--primary)); color: var(--white); }
-    .contact .section-head p, .contact .section-head h2 { color: var(--white); }
+    .contact {
+      background: linear-gradient(135deg, var(--blue-deep), var(--blue-dark) 55%, var(--blue));
+      color: white;
+    }
+
+    .contact .section-head h2,
+    .contact .section-head p {
+      color: white;
+    }
+
     .contact-box {
       display: grid;
       grid-template-columns: .85fr 1.15fr;
@@ -302,69 +523,157 @@
       padding: 28px;
       backdrop-filter: blur(10px);
     }
-    .contact-list { display: grid; gap: 14px; }
-    .contact-item { background: rgba(255,255,255,.12); border-radius: 20px; padding: 16px; }
-    .contact-item b { display: block; }
-    .contact-item span { opacity: .82; }
-    .contact form { background: var(--white); color: var(--text); border-radius: 26px; padding: 22px; }
-    textarea { min-height: 110px; resize: vertical; }
+
+    .contact-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .contact-item {
+      background: rgba(255,255,255,.12);
+      border-radius: 20px;
+      padding: 16px;
+    }
+
+    .contact-item b {
+      display: block;
+    }
+
+    .contact-item span {
+      opacity: .85;
+    }
+
+    .contact form {
+      background: white;
+      color: var(--text);
+      border-radius: 26px;
+      padding: 22px;
+    }
+
+    textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
 
     .disclaimer {
       color: var(--muted);
       font-size: 13px;
       padding: 22px 0 42px;
     }
+
     footer {
       border-top: 1px solid var(--line);
       padding: 26px 0;
       color: var(--muted);
-      background: #fffaf4;
+      background: #f5f9ff;
     }
-    .footer-row { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
 
-    .mobile-toggle { display: none; }
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
 
     @media (max-width: 920px) {
-      .menu { display: none; }
-      .mobile-toggle { display: inline-flex; }
-      .hero-grid, .calculator, .about-grid, .contact-box { grid-template-columns: 1fr; }
-      .grid-3, .plans { grid-template-columns: 1fr; }
-      .steps { grid-template-columns: repeat(2, 1fr); }
-      .profile-inner { min-height: 420px; }
-      .trust-row { grid-template-columns: 1fr; }
+      .menu {
+        display: none;
+      }
+
+      .hero-grid,
+      .calculator,
+      .about-grid,
+      .contact-box {
+        grid-template-columns: 1fr;
+      }
+
+      .grid-3,
+      .plans {
+        grid-template-columns: 1fr;
+      }
+
+      .steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .trust-row {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-inner {
+        min-height: 420px;
+      }
     }
+
     @media (max-width: 560px) {
-      .nav { height: 68px; }
-      .brand strong { font-size: 15px; }
-      .brand small { font-size: 11px; }
-      .hero { padding: 46px 0 30px; }
-      section { padding: 54px 0; }
-      .steps { grid-template-columns: 1fr; }
-      .form-grid { grid-template-columns: 1fr; }
-      .profile-card { padding: 14px; border-radius: 26px; }
-      .profile-inner { padding: 20px; min-height: 360px; border-radius: 22px; }
-      .portrait-placeholder { font-size: 22px; }
-      .floating-note { position: static; margin-top: 16px; max-width: none; }
+      .nav {
+        height: 68px;
+      }
+
+      .brand strong {
+        font-size: 15px;
+      }
+
+      .brand small {
+        font-size: 11px;
+      }
+
+      .hero {
+        padding: 46px 0 30px;
+      }
+
+      section {
+        padding: 54px 0;
+      }
+
+      .steps,
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-card {
+        padding: 14px;
+        border-radius: 26px;
+      }
+
+      .profile-inner {
+        padding: 20px;
+        min-height: 360px;
+        border-radius: 22px;
+      }
+
+      .portrait-placeholder {
+        font-size: 22px;
+      }
+
+      .floating-note {
+        position: static;
+        margin-top: 16px;
+        max-width: none;
+      }
     }
   </style>
 </head>
+
 <body>
   <header>
     <div class="container nav">
-      <a class="brand" href="#top" aria-label="กลับหน้าแรก">
+      <a class="brand" href="#top">
         <span class="brand-mark">มว</span>
         <span>
           <strong>แมว วราลักษณ์</strong>
           <small>ที่ปรึกษาประกันชีวิตและสุขภาพ</small>
         </span>
       </a>
-      <nav class="menu" aria-label="เมนูหลัก">
+
+      <nav class="menu">
         <a href="#services">บริการ</a>
         <a href="#plans">แผนแนะนำ</a>
         <a href="#calculator">คำนวณทุน</a>
         <a href="#about">เกี่ยวกับเรา</a>
         <a href="#contact">ติดต่อ</a>
       </nav>
+
       <a class="btn btn-primary" href="#contact">ปรึกษาฟรี</a>
     </div>
   </header>
@@ -373,32 +682,49 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <div class="eyebrow">✨ วางแผนครอบครัวให้อุ่นใจ ตั้งแต่วันนี้</div>
+          <div class="eyebrow">💙 วางแผนครอบครัวให้อุ่นใจ</div>
+
           <h1>ประกันชีวิตที่เข้าใจชีวิตจริงของทุกครอบครัว</h1>
+
           <p>
-            แมว วราลักษณ์ ช่วยออกแบบความคุ้มครองชีวิต สุขภาพ โรคร้ายแรง และเงินเกษียณ
-            ให้เหมาะกับรายได้ ภาระครอบครัว และเป้าหมายในอนาคตของคุณ
+            แมว วราลักษณ์ ช่วยออกแบบความคุ้มครองชีวิต สุขภาพ โรคร้ายแรง
+            และเงินเกษียณ ให้เหมาะกับรายได้ ภาระครอบครัว และเป้าหมายในอนาคตของคุณ
           </p>
+
           <div class="hero-actions">
             <a class="btn btn-primary" href="#calculator">เริ่มประเมินทุนคุ้มครอง</a>
             <a class="btn btn-ghost" href="#services">ดูบริการทั้งหมด</a>
           </div>
-          <div class="trust-row" aria-label="จุดเด่นบริการ">
-            <div class="trust-card"><strong>ฟรี</strong><span>ให้คำปรึกษาเบื้องต้น</span></div>
-            <div class="trust-card"><strong>ดูแล</strong><span>ตั้งแต่สมัครจนถึงเคลม</span></div>
-            <div class="trust-card"><strong>เหมาะสม</strong><span>เลือกตามงบและเป้าหมาย</span></div>
+
+          <div class="trust-row">
+            <div class="trust-card">
+              <strong>ฟรี</strong>
+              <span>ให้คำปรึกษาเบื้องต้น</span>
+            </div>
+            <div class="trust-card">
+              <strong>ดูแล</strong>
+              <span>ตั้งแต่สมัครจนถึงเคลม</span>
+            </div>
+            <div class="trust-card">
+              <strong>เหมาะสม</strong>
+              <span>เลือกตามงบและเป้าหมาย</span>
+            </div>
           </div>
         </div>
 
-        <div class="profile-card" aria-label="รูปโปรไฟล์ที่ปรึกษา">
+        <div class="profile-card">
           <div class="profile-inner">
             <div class="portrait-placeholder">
-              ใส่รูป<br />คุณแมว<br />ตรงนี้
+              ใส่รูป<br>คุณแมว<br>ตรงนี้
             </div>
           </div>
+
           <div class="floating-note">
             <strong>เป้าหมายของเรา</strong>
-            <span>ให้ทุกครอบครัวมีเงินก้อนยามจำเป็น เจ็บป่วยมีทางเลือก และเกษียณอย่างไม่ลำบาก</span>
+            <span>
+              ให้ทุกครอบครัวมีเงินก้อนยามจำเป็น เจ็บป่วยมีทางเลือก
+              และเกษียณอย่างไม่ลำบาก
+            </span>
           </div>
         </div>
       </div>
@@ -408,23 +734,38 @@
       <div class="container">
         <div class="section-head">
           <h2>บริการให้คำปรึกษา</h2>
-          <p>เลือกแผนประกันไม่ควรเริ่มจากเบี้ย แต่ควรเริ่มจาก “ความเสี่ยงที่ครอบครัวรับไม่ได้”</p>
+          <p>
+            เลือกแผนประกันไม่ควรเริ่มจากเบี้ย
+            แต่ควรเริ่มจาก “ความเสี่ยงที่ครอบครัวรับไม่ได้”
+          </p>
         </div>
+
         <div class="grid-3">
           <article class="card">
             <div class="icon">🛡️</div>
             <h3>คุ้มครองชีวิต</h3>
-            <p>วางทุนประกันให้พอดีกับหนี้สิน รายได้ครอบครัว และภาระที่ต้องดูแล เพื่อไม่ให้คนข้างหลังเดือดร้อน</p>
+            <p>
+              วางทุนประกันให้พอดีกับหนี้สิน รายได้ครอบครัว
+              และภาระที่ต้องดูแล เพื่อไม่ให้คนข้างหลังเดือดร้อน
+            </p>
           </article>
+
           <article class="card">
             <div class="icon">🏥</div>
             <h3>สุขภาพและค่ารักษา</h3>
-            <p>ช่วยดูวงเงินค่าห้อง ค่ารักษา โรคร้ายแรง และความคุ้มครองที่เหมาะกับโรงพยาบาลที่คุณใช้จริง</p>
+            <p>
+              ช่วยดูวงเงินค่าห้อง ค่ารักษา โรคร้ายแรง
+              และความคุ้มครองที่เหมาะกับโรงพยาบาลที่คุณใช้จริง
+            </p>
           </article>
+
           <article class="card">
             <div class="icon">🌿</div>
             <h3>เกษียณและบำนาญ</h3>
-            <p>ออกแบบเงินออมระยะยาว ให้มีเงินใช้หลังเกษียณอย่างเป็นระบบ ลดความกังวลเรื่องรายได้ในอนาคต</p>
+            <p>
+              ออกแบบเงินออมระยะยาว ให้มีเงินใช้หลังเกษียณอย่างเป็นระบบ
+              ลดความกังวลเรื่องรายได้ในอนาคต
+            </p>
           </article>
         </div>
       </div>
@@ -434,21 +775,28 @@
       <div class="container">
         <div class="section-head">
           <h2>ขั้นตอนดูแลลูกค้า</h2>
-          <p>คุยง่าย เข้าใจง่าย ไม่ขายเกินจำเป็น และดูแลต่อเนื่องหลังทำกรมธรรม์</p>
+          <p>
+            คุยง่าย เข้าใจง่าย ไม่ขายเกินจำเป็น
+            และดูแลต่อเนื่องหลังทำกรมธรรม์
+          </p>
         </div>
+
         <div class="steps">
           <article class="card step">
             <h3>ฟังเป้าหมาย</h3>
             <p>ทำความเข้าใจครอบครัว รายได้ หนี้สิน สุขภาพ และแผนอนาคต</p>
           </article>
+
           <article class="card step">
             <h3>ประเมินความเสี่ยง</h3>
             <p>ดูว่าควรมีเงินสำรองและทุนคุ้มครองเท่าไรจึงจะเหมาะสม</p>
           </article>
+
           <article class="card step">
             <h3>ออกแบบแผน</h3>
             <p>เปรียบเทียบทางเลือกตามงบ ไม่บังคับเลือกแผนที่เกินกำลังจ่าย</p>
           </article>
+
           <article class="card step">
             <h3>ดูแลหลังการขาย</h3>
             <p>ช่วยทบทวนกรมธรรม์ แจ้งเตือนเอกสาร และแนะนำขั้นตอนเคลม</p>
@@ -461,36 +809,51 @@
       <div class="container">
         <div class="section-head">
           <h2>แผนแนะนำตามช่วงชีวิต</h2>
-          <p>ตัวอย่างกลุ่มแผนเพื่อให้เห็นภาพ รายละเอียดจริงขึ้นอยู่กับอายุ สุขภาพ อาชีพ และเงื่อนไขบริษัทประกัน</p>
+          <p>
+            ตัวอย่างกลุ่มแผนเพื่อให้เห็นภาพ รายละเอียดจริงขึ้นอยู่กับอายุ
+            สุขภาพ อาชีพ และเงื่อนไขบริษัทประกัน
+          </p>
         </div>
+
         <div class="plans">
           <article class="card plan">
             <span class="badge">เริ่มต้นสร้างหลักประกัน</span>
             <h3>แผนครอบครัวอุ่นใจ</h3>
             <div class="price">งบยืดหยุ่น <small>/ เดือน</small></div>
-            <p>เหมาะกับคนมีครอบครัว มีภาระผ่อนบ้าน ผ่อนรถ หรือมีคนที่ต้องดูแล</p>
+            <p>
+              เหมาะกับคนมีครอบครัว มีภาระผ่อนบ้าน ผ่อนรถ
+              หรือมีคนที่ต้องดูแล
+            </p>
             <ul>
               <li>ทุนชีวิตตามภาระครอบครัว</li>
               <li>ลดความเสี่ยงคนข้างหลัง</li>
               <li>ปรับงบได้ตามรายได้</li>
             </ul>
           </article>
+
           <article class="card plan featured">
             <span class="badge">ได้รับความนิยม</span>
             <h3>แผนสุขภาพพร้อมใช้</h3>
             <div class="price">เลือกวงเงิน <small>ตามโรงพยาบาล</small></div>
-            <p>เหมาะกับคนที่ต้องการมีทางเลือกในการรักษา ลดความกังวลเรื่องค่ารักษาพยาบาล</p>
+            <p>
+              เหมาะกับคนที่ต้องการมีทางเลือกในการรักษา
+              ลดความกังวลเรื่องค่ารักษาพยาบาล
+            </p>
             <ul>
               <li>ค่าห้องและค่ารักษา</li>
               <li>เสริมโรคร้ายแรงได้</li>
               <li>ช่วยเตรียมเอกสารเคลม</li>
             </ul>
           </article>
+
           <article class="card plan">
             <span class="badge">วางแผนระยะยาว</span>
             <h3>แผนเกษียณไม่ลำบาก</h3>
             <div class="price">ทยอยออม <small>/ ระยะยาว</small></div>
-            <p>เหมาะกับคนที่อยากมีเงินใช้หลังเกษียณ และไม่อยากพึ่งลูกหลานทั้งหมด</p>
+            <p>
+              เหมาะกับคนที่อยากมีเงินใช้หลังเกษียณ
+              และไม่อยากพึ่งลูกหลานทั้งหมด
+            </p>
             <ul>
               <li>สร้างวินัยการออม</li>
               <li>วางเป้าหมายเงินรายเดือน</li>
@@ -508,31 +871,43 @@
             <div class="eyebrow">🧮 เครื่องมือประเมินเบื้องต้น</div>
             <h2>ลองคำนวณทุนประกันชีวิตที่ควรมี</h2>
             <p style="color: var(--muted); margin-top: 10px;">
-              สูตรง่าย ๆ: ค่าใช้จ่ายครอบครัวต่อเดือน × จำนวนปีที่อยากดูแล + หนี้สิน - เงินออมที่มี
-              ผลลัพธ์เป็นเพียงตัวเลขตั้งต้นสำหรับคุยกับที่ปรึกษา
+              สูตรง่าย ๆ: ค่าใช้จ่ายครอบครัวต่อเดือน × จำนวนปีที่อยากดูแล
+              + หนี้สิน - เงินออมที่มี
             </p>
-            <div class="result-box" id="resultBox">
+
+            <div class="result-box">
               <span>ทุนคุ้มครองที่แนะนำเบื้องต้น</span>
               <strong id="result">0 บาท</strong>
               <span id="resultNote">กรอกข้อมูลด้านขวาเพื่อคำนวณ</span>
             </div>
           </div>
+
           <form id="calcForm">
             <div class="form-grid">
-              <label>ค่าใช้จ่ายครอบครัว/เดือน
-                <input type="number" id="monthly" placeholder="เช่น 30000" min="0" />
+              <label>
+                ค่าใช้จ่ายครอบครัว/เดือน
+                <input type="number" id="monthly" placeholder="เช่น 30000" min="0">
               </label>
-              <label>อยากดูแลต่ออีกกี่ปี
-                <input type="number" id="years" placeholder="เช่น 10" min="0" />
+
+              <label>
+                อยากดูแลต่ออีกกี่ปี
+                <input type="number" id="years" placeholder="เช่น 10" min="0">
               </label>
-              <label>หนี้สินคงเหลือ
-                <input type="number" id="debt" placeholder="เช่น 1500000" min="0" />
+
+              <label>
+                หนี้สินคงเหลือ
+                <input type="number" id="debt" placeholder="เช่น 1500000" min="0">
               </label>
-              <label>เงินออม/ทรัพย์สินพร้อมใช้
-                <input type="number" id="saving" placeholder="เช่น 300000" min="0" />
+
+              <label>
+                เงินออม/ทรัพย์สินพร้อมใช้
+                <input type="number" id="saving" placeholder="เช่น 300000" min="0">
               </label>
             </div>
-            <button class="btn btn-primary" type="submit" style="margin-top: 16px; width: 100%;">คำนวณตอนนี้</button>
+
+            <button class="btn btn-primary" type="submit" style="margin-top: 16px; width: 100%;">
+              คำนวณตอนนี้
+            </button>
           </form>
         </div>
       </div>
@@ -541,27 +916,34 @@
     <section id="about">
       <div class="container about-grid">
         <div class="card">
-          <div class="icon">🤎</div>
+          <div class="icon">💙</div>
           <h2>เกี่ยวกับแมว วราลักษณ์</h2>
-          <p class="quote">“ประกันที่ดี ไม่ใช่แพงที่สุด แต่ต้องเหมาะกับชีวิตจริงของลูกค้า”</p>
+          <p class="quote">
+            “ประกันที่ดี ไม่ใช่แพงที่สุด แต่ต้องเหมาะกับชีวิตจริงของลูกค้า”
+          </p>
           <p style="color: var(--muted);">
             เราเชื่อว่าการวางแผนประกันชีวิตคือการดูแลคนที่เรารักอย่างเป็นระบบ
-            ลูกค้าควรเข้าใจสิ่งที่จ่าย เข้าใจสิ่งที่คุ้มครอง และมีคนช่วยดูแลเมื่อถึงวันที่ต้องใช้สิทธิ์จริง
+            ลูกค้าควรเข้าใจสิ่งที่จ่าย เข้าใจสิ่งที่คุ้มครอง
+            และมีคนช่วยดูแลเมื่อถึงวันที่ต้องใช้สิทธิ์จริง
           </p>
         </div>
+
         <div class="grid-3" style="grid-template-columns: 1fr 1fr;">
           <article class="card">
             <h3>พูดภาษาง่าย</h3>
             <p>อธิบายแผนให้เข้าใจ ไม่ใช้ศัพท์ประกันให้ซับซ้อนเกินจำเป็น</p>
           </article>
+
           <article class="card">
             <h3>ไม่ขายเกินงบ</h3>
             <p>เริ่มจากความจำเป็นและความสามารถในการจ่ายระยะยาว</p>
           </article>
+
           <article class="card">
             <h3>ทบทวนทุกปี</h3>
             <p>เมื่อรายได้ ภาระ หรือสุขภาพเปลี่ยน แผนควรปรับตาม</p>
           </article>
+
           <article class="card">
             <h3>ช่วยเรื่องเคลม</h3>
             <p>แนะนำเอกสารและขั้นตอนเบื้องต้นเมื่อเกิดเหตุจำเป็น</p>
@@ -576,20 +958,24 @@
           <h2>นัดปรึกษาฟรี</h2>
           <p>กรอกข้อมูลไว้ แล้วทีมงานจะติดต่อกลับเพื่อช่วยประเมินแผนที่เหมาะกับคุณ</p>
         </div>
+
         <div class="contact-box">
           <div class="contact-list">
             <div class="contact-item">
               <b>โทรศัพท์</b>
               <span>ใส่เบอร์โทรของคุณแมวตรงนี้</span>
             </div>
+
             <div class="contact-item">
               <b>LINE</b>
               <span>ใส่ LINE ID หรือ LINE OA ตรงนี้</span>
             </div>
+
             <div class="contact-item">
               <b>เวลาติดต่อ</b>
               <span>ทุกวัน 09.00–19.00 น.</span>
             </div>
+
             <div class="contact-item">
               <b>บริการ</b>
               <span>ประกันชีวิต สุขภาพ โรคร้ายแรง บำนาญ และวางแผนครอบครัว</span>
@@ -598,13 +984,18 @@
 
           <form id="contactForm">
             <div class="form-grid">
-              <label>ชื่อ-นามสกุล
-                <input type="text" id="name" placeholder="ชื่อของคุณ" required />
+              <label>
+                ชื่อ-นามสกุล
+                <input type="text" id="name" placeholder="ชื่อของคุณ" required>
               </label>
-              <label>เบอร์โทร/LINE
-                <input type="text" id="contactInfo" placeholder="เช่น 08x-xxx-xxxx" required />
+
+              <label>
+                เบอร์โทร/LINE
+                <input type="text" id="contactInfo" placeholder="เช่น 08x-xxx-xxxx" required>
               </label>
-              <label>ช่วงอายุ
+
+              <label>
+                ช่วงอายุ
                 <select id="ageRange">
                   <option>ต่ำกว่า 25 ปี</option>
                   <option>25–35 ปี</option>
@@ -613,7 +1004,9 @@
                   <option>มากกว่า 55 ปี</option>
                 </select>
               </label>
-              <label>สนใจเรื่องใด
+
+              <label>
+                สนใจเรื่องใด
                 <select id="interest">
                   <option>ประกันชีวิต</option>
                   <option>ประกันสุขภาพ</option>
@@ -623,19 +1016,27 @@
                 </select>
               </label>
             </div>
-            <label style="margin-top: 14px;">รายละเอียดเพิ่มเติม
+
+            <label style="margin-top: 14px;">
+              รายละเอียดเพิ่มเติม
               <textarea id="message" placeholder="เช่น งบต่อเดือน ภาระครอบครัว หรือคำถามที่อยากปรึกษา"></textarea>
             </label>
-            <button class="btn btn-primary" type="submit" style="margin-top: 16px; width: 100%;">ส่งข้อมูลติดต่อ</button>
-            <p id="formStatus" style="margin-top: 12px; color: var(--success); font-weight: 700;"></p>
+
+            <button class="btn btn-primary" type="submit" style="margin-top: 16px; width: 100%;">
+              ส่งข้อมูลติดต่อ
+            </button>
+
+            <p id="formStatus" style="margin-top: 12px; color: var(--green); font-weight: 700;"></p>
           </form>
         </div>
       </div>
     </section>
 
     <div class="container disclaimer">
-      หมายเหตุ: ข้อมูลในเว็บไซต์นี้เป็นการสื่อสารเพื่อความเข้าใจเบื้องต้น ไม่ใช่คำเสนอขายหรือการรับประกันผลตอบแทน
-      ความคุ้มครอง เบี้ยประกัน ข้อยกเว้น และเงื่อนไขการรับประกันภัยขึ้นอยู่กับแบบประกัน อายุ สุขภาพ อาชีพ และข้อกำหนดของบริษัทประกันภัย
+      หมายเหตุ: ข้อมูลในเว็บไซต์นี้เป็นการสื่อสารเพื่อความเข้าใจเบื้องต้น
+      ไม่ใช่คำเสนอขายหรือการรับประกันผลตอบแทน ความคุ้มครอง เบี้ยประกัน
+      ข้อยกเว้น และเงื่อนไขการรับประกันภัยขึ้นอยู่กับแบบประกัน อายุ สุขภาพ
+      อาชีพ และข้อกำหนดของบริษัทประกันภัย
       ผู้สนใจควรอ่านเอกสารประกอบการเสนอขายและกรมธรรม์ก่อนตัดสินใจทำประกัน
     </div>
   </main>
@@ -643,28 +1044,44 @@
   <footer>
     <div class="container footer-row">
       <span>© <span id="year"></span> แมว วราลักษณ์. All rights reserved.</span>
-      <span>เว็บไซต์ตัวอย่างสำหรับที่ปรึกษาประกันชีวิต</span>
+      <span>เว็บไซต์ตัวอย่างโทนน้ำเงิน–เหลืองทองสำหรับที่ปรึกษาประกันชีวิต</span>
     </div>
   </footer>
 
   <script>
-    const currency = new Intl.NumberFormat('th-TH', { style: 'currency', currency: 'THB', maximumFractionDigits: 0 });
+    const currency = new Intl.NumberFormat('th-TH', {
+      style: 'currency',
+      currency: 'THB',
+      maximumFractionDigits: 0
+    });
+
     document.getElementById('year').textContent = new Date().getFullYear();
 
     document.getElementById('calcForm').addEventListener('submit', function(event) {
       event.preventDefault();
+
       const monthly = Number(document.getElementById('monthly').value || 0);
       const years = Number(document.getElementById('years').value || 0);
       const debt = Number(document.getElementById('debt').value || 0);
       const saving = Number(document.getElementById('saving').value || 0);
+
       const need = Math.max((monthly * 12 * years) + debt - saving, 0);
-      document.getElementById('result').textContent = currency.format(need).replace('฿', '') + ' บาท';
-      document.getElementById('resultNote').textContent = need > 0 ? 'ใช้เป็นตัวเลขเริ่มต้นเพื่อปรึกษาและปรับให้เหมาะกับสุขภาพและงบประมาณ' : 'ตอนนี้เงินออมอาจเพียงพอตามข้อมูลที่กรอก แต่ควรทบทวนสุขภาพและรายได้ด้วย';
+
+      document.getElementById('result').textContent =
+        currency.format(need).replace('฿', '') + ' บาท';
+
+      document.getElementById('resultNote').textContent =
+        need > 0
+          ? 'ใช้เป็นตัวเลขเริ่มต้นเพื่อปรึกษาและปรับให้เหมาะกับสุขภาพและงบประมาณ'
+          : 'ตอนนี้เงินออมอาจเพียงพอตามข้อมูลที่กรอก แต่ควรทบทวนสุขภาพและรายได้ด้วย';
     });
 
     document.getElementById('contactForm').addEventListener('submit', function(event) {
       event.preventDefault();
-      document.getElementById('formStatus').textContent = 'ได้รับข้อมูลตัวอย่างแล้ว — เมื่อนำเว็บขึ้นจริง ต้องเชื่อมต่อระบบฟอร์มหรือ LINE OA เพิ่มเติม';
+
+      document.getElementById('formStatus').textContent =
+        'ได้รับข้อมูลตัวอย่างแล้ว — เมื่อนำเว็บขึ้นจริง ต้องเชื่อมต่อระบบฟอร์มหรือ LINE OA เพิ่มเติม';
+
       event.target.reset();
     });
   </script>
